@@ -1,0 +1,47 @@
+[tabindex$="1"]:hover {
+  color:red;
+}
+
+[tabindex$="1"]:focus {
+  color:blue;
+}
+
+[tabindex$="1"]:active {
+  color:green;
+}
+
+a:visited {
+  color:orange;
+}
+
+a:link {
+  color:pink;
+}
+
+[href^="mail"]:link {
+  color:blue;
+}
+
+[href^="tel"]:link {
+  color:yellow;
+}
+
+[href$="pdf"i]:link {
+  font-size:30px;
+}
+
+.a>ul>li:nth-child(n+4):nth-child(-n+8) {
+  color:red;
+}
+
+.b>ul>li:nth-child(-n+25) {
+  color:red;
+}
+
+.b>ul>li:nth-child(n+65) {
+  color:green;
+}
+
+.b>ul>li:nth-child(n+35):nth-child(-n+50) {
+  color:blue;
+}

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xiaomi</title>   
+  <style type="text/less">
+   body {
+      margin: 0; 
+      width:100%;
+    }
+    .tou {
+      width:100%;
+      height:120px;
+      background-image:url(head.jpg);
+      background-position:center;
+      xtext-indent:-9999em;
+      min-width:1226px;
+      a {
+      display: block;
+      width: 100%;
+      height: 120px;
+    }
+    }
+    .daohang {
+      width: 100%;
+      height:40px;
+      background:#333;
+      box-sizing: border-box;
+      div {
+        width:1226px;
+        height:40px;
+        margin:0 auto;
+        vertical-align: middle;
+        background:#333;
+        ul {
+          font-size:12px;
+        }
+        .youdaohang {          
+          float: right;
+          height:40px;
+          .gwc {
+            xfont-size:0;
+            position: relative;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: #666666;
+            background-image:url(gwc1.png);
+            background-repeat: no-repeat;            
+            background-size:20px 20px;
+            background-position:15px;
+            width:120px;
+            height:40px;
+            line-height:40px;
+            padding-left:40px;            
+            ul {              
+              xdisplay: none;
+              overflow: hidden;
+              position:absolute;
+              width:320px;
+              xheight:80px;
+              top:100%;
+              right:0%;
+              color:black;
+              background:white;
+              z-index:50;
+              max-height:0px;
+              xborder:1px solid rgb(237,237,237);
+              border-top:none;
+              box-shadow: 0 5px 10px #ddd;
+              transform:translateY(-5px);
+              li {
+                display: inline-block;
+                width:320px;
+                xheight:20px;
+                text-align: center;
+                background-color: white;
+                xborder:1px solid black;
+                xborder-top:none;
+                xvertical-align: top;
+                margin:0;
+                padding:0;
+              }
+            } 
+          }
+          
+          .gwc:hover {
+            background-image:url(gwc2.png);
+            background-repeat: no-repeat;
+            background-repeat: no-repeat;            
+            background-size:20px 20px;
+            background-position:15px;
+            background-color: white;            
+          }
+          .gwc:hover a {
+            width:120px;
+            height:40px;
+            color:#ff6700;
+          }
+          .gwc:hover ul {
+              xdisplay: block; 
+              max-height: 200px;  
+              transition:1s;
+              transform:translateY(0px);
+            }
+        } 
+        ul {
+        display: inline-block;
+        margin :0;
+        padding:0;
+        line-height:40px;
+        span {
+          color:#666666;
+        }
+        
+        li {
+          display: inline-block;
+          font-size:12px;
+
+          a {
+            text-decoration:none;
+            color: #b0b0b0;
+          }
+          a:hover {
+            color:white;
+          }
+        }       
+      }
+      }  
+    }
+    .cd1 {
+      width:100%;
+      height:100px;
+      box-sizing: border-box;
+      position:relative;
+    .cd2 {
+      xposition: relative;
+      width:1226px;
+      height:100px;
+      margin:0 auto;
+      background-color:white;
+      .sousuo {
+        float:right;
+        width:296px;
+        height:50px;
+        margin-top:25px;
+      }
+    .cd {
+      float: left;
+      width:850px;
+      height:100px;
+      xtransition:height 1s;
+      div {
+        display: inline-block;
+        transition:height 1s;
+        .xiala1 {
+          height:0;
+          overflow: hidden;
+          position:absolute;
+          display: inline-block;
+          xlist-style-type:none;
+          padding:0;
+          margin:0;
+          width:100%;
+          background-color: red; 
+          z-index:50;
+          top:100%;
+          left:0;
+          .xiala2 {
+            width:1226px;
+            margin:0 auto;
+            list-style-type:none;
+            padding:0;
+            li {
+              float:left;
+              width:200px;
+              height:230px;
+            }
+          }         
+        }
+        a {
+          text-decoration:none;
+          color: black;
+          span {
+            line-height: 100px;
+            font-size:16px;
+            margin:8px;
+          }
+        }
+        a:hover {
+          color:#ff6700;
+        }        
+      }
+      div:hover > .xiala1{
+        z-index:55;
+      }     
+    }
+    .cd:hover .xiala1{
+        height:230px;
+        transition:height 1s .5s;
+    }
+    .sousuo1 {
+      float:right;
+      height:50px;
+      width:296px;
+      margin-top:25px;
+      right:0;
+
+      .sousuo2 {
+        height:50px;
+        width:296px;
+        position:relative; 
+        .sousuo3 {
+          width:245px;
+          height:50px;
+          box-sizing: border-box;                   
+        }
+        .sousuo3:focus + .guanjianci{
+          display: block;
+        }
+        .guanjianci {  
+            font-size:12px;          
+            position:absolute;
+            top:100%;
+            list-style-type: none;
+            padding:0;
+            margin:0;
+            width:245px;
+            height:300px;
+            border:1px solid rgb(255,103,0);
+            z-index:1000;
+            display: none;
+            background-color: white;
+            li {
+              line-height:30px;
+              height:30px;
+              a {
+                color:rgb(119,119,119);
+                text-decoration:none;
+                padding:15px;                
+              }
+            }
+          }
+        .anniu {
+          float: right;
+          top:0;
+          height:50px;
+          width:51px;
+          cursor:pointer;
+          border:1px solid rgb(169,169,169);
+          border-left:none;
+          box-sizing:border-box;
+          background-image: url(search.png);
+          background-repeat: no-repeat;          
+          xbackground-size:38px 46px ;
+          background-position: 50% 50%;
+          background-color: white;
+          color:rgba(0,0,0,0);
+          background-size: 25px;
+        }
+      }
+    }
+    .logo {
+      float:left;
+      display: block;
+      width:55px;
+      height:62px;
+      margin:22px;
+      margin-left:0;      
+      background-image: url(logo.png);
+      background-repeat: no-repeat;
+      vertical-align:middle;
+    }
+    .k {
+      float: left;
+      height:100px;
+      width:142px;
+      padding-right:15px;
+    }
+  }
+  }
+  .djlb1 {
+    width:100%;
+    height:640px;
+    box-sizing: border-box;
+    .djlb2 {
+       position: relative;
+      width:1226px;
+      height:460px;
+      margin:0 auto;
+      .lb {     
+      width:1226px;
+      height:460px;
+        img {
+          position:absolute;
+          width:1226px;
+          height:460px;
+          left:0;
+        }  
+      }
+      .dj1 {
+        position: absolute;
+        width:235px;
+        height:460px;
+        left:0;
+        top:0;
+        z-index: 30;
+        background-color: rgba(0,0,0,0.6);
+        .dj2 {
+          width:235px;
+          height:420px;
+          padding:20px 0;
+          ul {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            li {
+              width:205px;
+              height:42px;
+              font-size:14px;
+              line-height: 42px;
+              text-align: left;
+              padding-left:30px;
+              color:white;
+            }
+            li:hover {
+              cursor:pointer;
+              background-color: #ff6700;
+            }
+          }
+        }
+      }      
+    }
+  }
+  .nr1 {
+    width:100%;
+    height:185px;
+    .nr12 {
+      width:1226px;
+      height:185px;
+      margin:0 auto;
+      .s1 {
+        float: left;
+        width:235px;
+        height:170px;
+        margin-top:15px;
+        margin-right:15px;
+        background-color: rgb(95,87,80);
+      } 
+      .s2 {
+        float: left;
+        width:315px;
+        height:170px;
+        margin-top:15px;
+        margin-right:15px;
+        img {
+        width:315px;
+        height:170px;
+      }
+      } 
+      .s3 {
+        float: left;
+        width:315px;
+        height:170px;
+        margin-top:15px;
+        margin-right:15px;
+        img {
+        width:315px;
+        height:170px;
+      } 
+      } 
+      .s4 {
+        float: left;
+        width:315px;
+        height:170px;
+        margin-top:15px;
+        img {
+        width:315px;
+        height:170px;
+      }
+      } 
+    }
+  }
+  .sg1 {
+    width:100%;
+    height:438px;
+    .sg2 {
+      width:1226px;
+      height:438px;
+      margin:0 auto;
+      border:1px solid red;
+      h2 {
+        width:1226px;
+        height:58px;
+        line-height: 58px;
+      }
+      .s1 {
+        width:234px;
+        height:340px;
+        float:left;
+        margin-right:14px;
+        background-image: url(s1.jpg);
+        background-size:160px 160px;
+        background-repeat: no-repeat;
+        background-position:center;
+      } 
+      .s2 {
+        width:234px;
+        height:340px;
+        float:left;
+        margin-right:14px;
+        background-image: url(s2.jpg);
+        background-size:160px 160px;
+        background-repeat: no-repeat;
+        background-position:center;
+
+      } 
+      .s3 {
+        width:234px;
+        height:340px;
+        float:left;
+        margin-right:14px;
+        background-image: url(s3.jpg);
+        background-size:160px 160px;
+        background-repeat: no-repeat;
+        background-position:center;
+
+      } 
+      .s4 {
+        width:234px;
+        height:340px;
+        float:left;
+        margin-right:14px;
+        background-image: url(s4.jpg);
+        background-size:160px 160px;
+        background-repeat: no-repeat;
+        background-position:center;
+
+      } 
+      .s5 {
+        width:234px;
+        height:340px;
+        float:left;
+        background-image: url(s5.jpg);
+        background-size:160px 160px;
+        background-repeat: no-repeat;
+        background-position:center;
+
+      } 
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="tou"><a href="https://www.mi.com/a/h/5857.html?client_id=180100041086&masid=17409.0368"></a></div>
+  <div class="daohang">
+    <div>
+    <ul>
+      <li><a href="https://www.mi.com/index.html">小米商城</a><span>|</span></li>
+      <li><a href="https://www.miui.com/">MIUI</a><span>|</span></li>
+      <li><a href="https://iot.mi.com/index.html">loT</a><span>|</span></li>
+      <li><a href="https://i.mi.com/">云服务</a><span>|</span></li>
+      <li><a href="https://shuidi.mi.com/">小爱开放平台</a><span>|</span></li>
+      <li><a href="https://jr.mi.com/?from=micom">金融</a><span>|</span></li>
+      <li><a href="https://youpin.mi.com/">有品</a><span>|</span></li>
+      <li><a href="https://b.mi.com/?client_id=180100031058&masid=17409.0358">政企服务</a><span>|</span></li>
+      <li><a href="https://www.mi.com/index.html#J_modal-globalSites">Select Region</a></li>
+    </ul>
+    <ul class="youdaohang">
+      <li><a href="">登录</a><span> |</span></li>
+      <li><a href="">注册</a><span> |</span></li>
+      <li><a href="">消息通知</a></li>
+      <li class="gwc"><a href="">购物车 <span>(0)</span></a>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="cd1">
+    <div class="cd2">
+      <div class="logo"><a href="https://www.mi.com/index.html"></a></div>
+      <div class="cd">
+        <div class="k"></div>
+        <div class="xmsj"><a href=""><span>小米手机</span></a>
+          <div class="xiala1">
+            <ul class="xiala2">
+              <li>产品1</li>
+              <li>产品2</li>
+              <li>产品3</li>
+              <li>产品4</li>
+            </ul>
+          </div> 
+        </div>          
+        <div class="hm"><a href=""><span>红米</span></a>
+          <div class="xiala1" style="background-color:blue">
+            <ul class="xiala2">
+              <li>产品1</li>
+              <li>产品2</li>
+              <li>产品3</li>
+              <li>产品4</li>
+            </ul>
+          </div> 
+        </div>
+        <div class="ds"><a href=""><span>电视</span></a>
+          <div class="xiala1" style="background-color:yellow">
+            <ul class="xiala2">
+              <li>产品1</li>
+              <li>产品2</li>
+              <li>产品3</li>
+              <li>产品4</li>
+            </ul>
+          </div> 
+        </div>
+        <div class="bjb"><a href=""><span>笔记本</span></a>
+          <div class="xiala1" style="background-color:green">
+            <ul class="xiala2">
+              <li>产品1</li>
+              <li>产品2</li>
+              <li>产品3</li>
+              <li>产品4</li>
+            </ul>
+          </div> 
+        </div>
+        <div class="hz"><a href=""><span>盒子</span></a>
+          <div class="xiala1" style="background-color:pink">
+            <ul class="xiala2">
+              <li>产品1</li>
+              <li>产品2</li>
+              <li>产品3</li>
+              <li>产品4</li>
+            </ul>
+          </div> 
+        </div>
+        <div class="xp"><a href=""><span>新品</span></a></div>
+        <div class="lyq"><a href=""><span>路由器</span></a></div>
+        <div class="znyj"><a href=""><span>智能硬件</span></a></div>
+        <div class="fw"><a href=""><span>服务</span></a></div>
+        <div class="sq"><a href=""><span>社区</span></a></div>
+      </div>    
+      <div class="sousuo1">
+        <form class="sousuo2">
+          <input class="sousuo3" type="text" name="sousuo">
+            <ul class="guanjianci">
+              <li><a href="#">小米6X</a></li>
+              <li><a href="#">小米MIX 2S</a></li>
+              <li><a href="#">黑鲨游戏手机</a></li>
+              <li><a href="#">红米Noto 5</a></li>
+              <li><a href="#">红米5A</a></li>
+            </ul>
+          <input class="anniu" type="submit">
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  <div class="djlb1">
+   <div class="djlb2">
+    <div class="dj1">
+      <div class="dj2">
+        <ul>
+          <li>手机 电话卡</li>
+          <li>电视 盒子</li>
+          <li>笔记本</li>
+          <li>智能 家电</li>
+          <li>健康 家居</li>
+          <li>出行 儿童</li>
+          <li>路由器 手机配件</li>
+          <li>移动电源 插线板</li>
+          <li>耳机 音响</li>
+          <li>生活 米兔</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lb"><img src="lunbo1.jpg"></div>
+  </div>
+  <div class="nr1">
+    <div class="nr12">
+      <div class="s1"></div>
+      <div class="s2"><a href="https://item.mi.com/product/10000083.html"><img src="nr1.jpg" alt=""></a></div>
+      <div class="s3"><a href="https://item.mi.com/product/10000064.html"><img src="nr2.jpg" alt=""></a></div>
+      <div class="s4"><a href="http://www.mi.com/roomrobot"><img src="nr3.jpg" alt=""></a></div>      
+    </div>
+  </div>
+  <div class="sg1">
+    <div class="sg2">
+      <h2>小米闪购</h2>
+      <div class="sg3">
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+      <div class="s4"></div>
+      <div class="s5"></div>
+      <div class="s6"></div>
+      </div>
+    </div>  
+  </div>
+</body>
+<script src="less.min.js"></script>
+</html>
