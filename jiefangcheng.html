@@ -1,0 +1,44 @@
+<script type="xxx">
+  debugger
+  var a=prompt('请输入一个数字a','');
+  var b=prompt('请输入一个数字b','');
+  var c=prompt('请输入一个数字c','');
+  var v=b**2-4*a*c;
+  var g_v=Math.sqrt(v);
+  var x1=(-b+g_v)/(2*a);
+  var x2=(-b-g_v)/(2*a);        
+  if (v == 0) {
+    x=x1;  
+    console.log(x);
+  }else if (v > 0) {
+    console.log(x1);
+    console.log(x2);
+  }else {
+    x1=((-b)/(2*a))+"+"+(Math.sqrt(4*a*c-b**2))/(2*a)+"i";
+    x2=((-b)/(2*a))+"-"+(Math.sqrt(4*a*c-b**2))/(2*a)+"i";
+    console.log(x1);
+    console.log(x2);
+  }                      
+</script>
+
+
+<script>
+  var a=prompt('请输入一个数字a','');
+  var b=prompt('请输入一个数字b','');
+  var c=prompt('请输入一个数字c','');
+  var d=prompt('请输入一个数字d','');
+  var e=prompt('请输入一个数字m','');
+  var f=prompt('请输入一个数字n','');
+
+  if (a/c != b/d) {
+    var x = (c * e - b * f) / (a * e - b * d);
+    var y = (d * c - a * f) / (d * b - a * e);
+    console.log(x);
+    console.log(y);
+  }else if (a/c == b/d == e/f) {
+    console.log('有无穷个解')
+  }else if (a/c == b/d != e/f) {
+    console.log('无解')
+  }
+
+</script>
