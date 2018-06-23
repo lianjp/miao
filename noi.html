@@ -1,0 +1,355 @@
+<script id="ch0105/01">  //1.求平均年龄
+  // debugger;
+  var zong=Number(prompt("请输入总人数",""))
+  if (1 <= zong && zong <= 100){
+    var age=0 
+    var i=0
+    while (i<zong) {
+      age +=Number(prompt("请输入第"+(i+1)+"个学生的年龄"))
+      i += 1
+    }alert(age/zong)
+  }else {
+    alert("请输入一个1到100之间的数")
+  }
+</script>
+
+
+
+<script id="ch0105/02">  //2.平均结余
+  // debugger;
+  var i=0
+  var zong=0;
+  while (i<12){
+    var num=Number(prompt("请输入第"+(i+1)+"月的结余",""))
+    if (0 < num && num <= 1000000) {
+      zong=zong+num
+      i+=1 
+    }else {
+    alert("请输入一个不大于1,000,000的正数")
+    }             
+  }
+  var chu = "$"+(zong/12)
+  console.log(chu)
+</script>
+
+
+
+<script id="ch0105/03">   //3.均值
+  var n=Number(prompt("输入样本容量",""))
+  if (n<100) {
+    var i=0
+    var a
+    var num=0
+    while (i<n) {
+      a=Number(prompt("请输入第"+(i+1)+"个样本数据"))
+      num=num+a      
+      i+=1
+    }
+    var p=num/n
+    console.log(p.toFixed(4))
+  }else {
+    alert("请输入一个小于100的整数")
+  }
+</script>
+
+
+
+<script id="ch0105/04">   //4.和与均值
+  // debugger;
+  var n=Number(prompt("n个整数",""))
+  if (1 <=n && n <= 10000) {
+  var i=0
+  var a
+  var num=0
+  while (i<n) {
+      a=Number(prompt("请输入第"+(i+1)+"个样本数据")) 
+      if (a < 10000 && a > -10000) {
+        num=num+a      
+        i+=1
+      }else {
+        alert("绝对值不能超过10000")
+      }     
+    } 
+    var p=num/n
+    var m=p.toFixed(5)
+    var k=num+" "+m
+    console.log(k)
+  }else {
+    alert("请输入一个1-10000之间的数")
+  }
+</script>
+
+
+
+<script id="ch0105/05">   //5.最高分
+  var n=Number(prompt("n个整数",""))
+  if (1 <=n && n <= 100) {
+  var i=0
+  var a
+  var b=0
+  var max
+  while (i<n) {
+      a=Number(prompt("请输入第"+(i+1)+"个同学的成绩"))       
+      if (a <= 100 && a >= 0) {
+        if (a>b) {
+          max = a
+          b = a
+        }else {
+          max = b;
+        }
+        i=i+1              
+      }else {
+        alert("请输入一个1-100之间的数")
+      }     
+    } 
+    console.log(mix)
+  }else {
+    alert("请输入一个1-100之间的数")
+  }
+</script>
+
+
+
+<script id="ch0105/06">   //6.元素跨度
+  var zong=Number(prompt("请输入序号个数",""))
+  if (1<=zong&&zong<=1000) {
+    var i = 0
+    var a
+    var b=0
+    var c=Infinity
+    var max
+    var min
+    var kua
+    while (i < zong )  {
+      a=Number(prompt("请输入第"+(i+1)+"个数"))
+      if (a>b) {
+        max = a
+        b = a
+      }else {
+        max = b      
+      }
+      if (a<c) {
+        min = a
+        c = a
+      }else {
+        min = c
+      }
+      i=i+1
+    }
+    console.log(max)
+    console.log(min)
+    kua = max - min
+    console.log(kua) 
+  }else {
+    alert("请输入一个1-1000之间的数")
+  }
+</script>
+
+
+
+<script id="ch0105/07">   //7.奖牌计数
+ var n=Number(prompt("请输入参与天数",""))
+  if (1<=n&&n<=17) {
+    var j
+    var y
+    var t
+    var jz=0
+    var yz=0
+    var tz=0
+    var k=" "
+    var num
+    var i=0
+    while (i<n) {     
+      j=Number(prompt("请输入第"+(i+1)+"天金牌数"))
+      y=Number(prompt("请输入第"+(i+1)+"天银牌数"))
+      t=Number(prompt("请输入第"+(i+1)+"天铜牌数"))
+      i=i+1
+      jz=jz+j
+      yz=yz+y
+      tz=tz+t
+      num=jz+yz+tz          
+    }console.log(jz+k+yz+k+tz+k+num)
+  }
+</script>
+
+
+
+<script id="ch0105/08">  //8.多边形内角和
+  // debugger;
+  var n=Number(prompt("请输入几边形","")) 
+  var i = 0  
+  var zong= (n-2)*180
+  var num = 0
+  var j
+  while ( i < (n-1) ) {
+    j = Number(prompt("请输入第"+(i+1)+"个角的度数",""))
+    i=i+1
+    num = num + j
+  }
+  var yu = zong - num
+  console.log(yu)
+</script>
+
+
+
+<script id="ch0105/09">  //9.奇数求和
+  // debugger;
+  var m=Number(prompt("请输入一个非负整数",""))
+  var n=Number(prompt("请再输入一个非负整数",""))
+  if (m>=0&&n>=0&&n<=300&&m<n) {
+    var i = 0
+    var z = m
+    var j = 0
+    var num = 0
+    while (i <= (n - m)) {
+      if (z % 2 != 0) {
+        j = z
+        num = num + j
+       }
+       z = z + 1
+       i = i + 1
+    }console.log(num)
+  }else {
+    alert("输入有误")
+  }
+</script>
+
+
+
+<script id="ch0105/10">  //10.累加
+  //  debugger;
+  var m=Number(prompt("请输入一个非负整数",""))
+  var n=Number(prompt("请再输入一个非负整数",""))
+  if (m>0&&n>0&&n<=1000&&m<n) {
+    var i = 0
+    var z = m
+    var zc = 0
+    var num = 0
+    while (i <= (n - m)) {
+      if (z % 17 == 0) {
+        zc = z
+        num = num + zc
+       }
+       z = z + 1
+       i = i + 1
+    }console.log(num)
+  }else {
+    alert("输入有误")
+  }
+</script>
+
+
+
+<script id="ch0105/11">  //11.整数个数
+  // debugger;
+  var k = Number(prompt("请输入一个正整数",""))
+  if (1 < k&&k < 100) {
+    var i = 0
+    var a = 0
+    var b = 0
+    var c = 0
+    while (i < k) {
+      var z = Number(prompt("请输入第"+(i+1)+"个值",""))
+      i = i + 1
+      if (1<=z&&z<=10) {
+        if (z==1) {
+          var a = a + 1
+        }
+        if (z==5) {
+          var b = b + 1
+        }
+        if (z==10) {
+          var c = c + 1
+        }
+      }else {
+        alert("输入有误")
+      }
+    }
+    console.log(a)
+    console.log(b)
+    console.log(c)
+  }else {
+    alert("输入有误")
+  }
+</script>
+
+
+
+<script id="ch0105/12">  //12.指定数字相同个数
+  // debugger;
+  var n=Number(prompt("请输入序列长度",""))
+  if (n<=100) {
+    var m=Number(prompt("请输入指定的数字",""))
+    var i = 0
+    var a
+    var z = 0
+    while (i<n) {
+      a = Number(prompt("请输入第"+(i+1)+"个值"),"") 
+      if (a == m) {
+        z = z + 1
+      }
+      i = i + 1
+    }console.log(z)
+  }else {
+    prompt("输入有误")
+  }
+</script>
+
+
+<script id="ch0105/13">  //13.乘方计算
+  // debugger;
+  var a=Number(prompt("请输入一个整数",""))
+  if (-1000000<=a&&a<=1000000) {
+    var n=Number(prompt("请输入次方数",""))
+    if (1<=n&&n<=10000) {
+      var i = 0
+      var z = 1
+      while (i<n) {        
+        z = z * a  
+        i= i + 1      
+      }
+    }
+    console.log(z)
+  }else {
+    alert("输入有误")
+  }
+</script>
+
+
+
+<script id="ch0105/14">  //14.人口增长问题
+  var x=Number(prompt("请输入人口基数",""))
+  if (1<=x&&x<=100) {
+    var n=Number(prompt("请输入年数",""))
+    if (1<=n&&n<=100) {
+      var i = 0 
+      var z = x     
+      while (i<n) {
+        z = z + z * 1 / 1000
+        i+=1
+      }console.log(z.toFixed(4))
+    }
+  }else {
+    alert("输入有误")
+  }
+</script>
+
+
+
+<script id="ch0105/14">  //15.银行利息
+  // debugger;
+  var r = Number(prompt("请输入年利率",""))
+  if (0<=r&&r<=20) {
+    var m = Number(prompt("请输入本金",""))
+    if (100<=m&&m<=1000000) {
+      var y = Number(prompt("请输入投资年数",""))
+      if (0<=y&&y<=400) {
+        var i = 0
+        while (i<y) {
+          m=m + m * r / 100
+          i+=1
+        }console.log(parseInt(m))        
+      }
+    }
+  }
+</script>
