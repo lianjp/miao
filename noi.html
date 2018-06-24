@@ -226,11 +226,188 @@
 
 
 
-<script script id="ch0103/20">
+<script id="ch0103/20">
   var a=Number(prompt("请输入幂数",""))
   var m=2**a
   console.log(m)
 </script>
+
+
+
+<script id="ch0104/1">
+  var n=Number(prompt("请输入一个整数"))
+  if (n<0) {
+    console.log("negative")    
+  }else if (n>0) {
+    console.log("positive")
+  }else {
+    console.log("zero")
+  }
+</script>
+
+
+
+<script id="ch0104/2">
+  var n=Number(prompt("请输入一个浮点数"))
+  if (n<0) {
+    n=-n
+  }console.log(n.toFixed(2))
+</script>
+
+
+
+<script id="ch0104/3">
+  var n=Number(prompt("请输入一个正整数"))
+  if (n/2 == 0) {
+    console.log("even")
+  }
+  if (n/2 != 0) {
+    console.log("odd")
+  }
+</script>
+
+
+
+<script id="ch0104/4">
+  var n=prompt("请输入一个字符")
+  if (n.charCodeAt()/2!=0) {
+    console.log("YES")
+  }else {
+    console.log("NO")
+  }
+</script>
+
+
+
+<script id="ch0104/5">
+  var x=Number(prompt("请输入第一个数整数"))
+  var y=Number(prompt("请输入第二个数整数"))
+  if (x>y) {
+    console.log(">")    
+  }else if (x<y) {
+    console.log("<")
+  }else {
+    console.log("=")
+  }
+</script>
+
+
+
+<script id="ch0104/6">
+  var n=prompt("请输入一个正整数")
+  if (n.length<=2) {
+    console.log("1")
+  }else {
+    console.log("0")
+  }
+</script>
+
+
+
+<script id="ch0104/7">
+  var n=Number(prompt("请输入'幸运'个数"))
+  var m=Number(prompt("请输入'鼓励'个数"))
+  if (n>=10||m>=20) {
+    console.log("1")
+  }else {
+    console.log("0")
+  }
+</script>
+
+
+
+<script id="ch0104/8">
+  var n=Number(prompt("请输入一个整数"))
+  if (n % 3 == 0 && n % 5 == 0) {  //用%求余判断，不是用/除号判断！！！
+    console.log("YES")
+  }else {
+    console.log("NO")
+  }
+</script>
+
+
+
+<script id="ch0104/9">
+  var n=Number(prompt("请输入一个整数"))
+  if (n%3==0&&n%5==0&&n%7==0) {
+    console.log("3"+" "+"5"+" "+"7")
+  }
+  if (n%3==0&&n%5==0&&n%7!=0) {
+    console.log("3"+" "+"5")
+  }
+  if (n%3==0&&n%5!=0&&n%7==0) {
+    console.log("3"+" "+"7")
+  }
+  if (n%3!=0&&n%5==0&&n%7==0) {
+    console.log("5"+" "+"7")
+  }
+  if (n%3==0&&n%5!=0&&n%7!=0) {
+    console.log("3")
+  }
+  if (n%3!=0&&n%5==0&&n%7!=0) {
+    console.log("5")
+  }
+  if (n%3!=0&&n%5!=0&&n%7==0) {
+    console.log("7")
+  }
+  if (n%3!=0&&n%5!=0&&n%7!=0) {
+    console.log("n")
+  }
+</script>
+
+
+
+<script id="ch0104/10">
+  var a=Number(prompt("请输入语文成绩"))
+  var b=Number(prompt("请输入数学成绩"))
+  if (a<60||b<60) {
+    console.log("1")
+  }else {
+    console.log("0")
+  }
+</script>
+
+
+
+<script id="ch0104/11">
+  var n=Number(prompt("请输入展览日期"))
+  if (n!=1&&n!=3&&n!=5) {
+    console.log("YES")    
+  }else {
+    console.log("NO")
+  }
+</script>
+
+
+
+<script id="ch0104/12">
+  var n=Number(prompt("请输入距离"))
+  var w=n/1.2
+  var b=27+23+n/3.0
+  if (w<b) {
+    console.log("Walk")
+  }else if (w>b) {
+    console.log("Bike")
+  }else {
+    console.log("All")
+  }
+</script>
+
+
+
+<script id="ch0104/13">
+  var n=Number(prompt("请输入一个浮点数"))
+  var y
+  if (0<n&&n<5) {
+    y=-n+2.5    
+  }else if (5<=n&&n<10) {
+    y=2-1.5(n-3)*(n-3)    
+  }else if (10<=n&&n<20) {
+    y=n/2-1.5
+  }
+  console.log(y.toFixed(3))
+</script>
+
 
 
 
