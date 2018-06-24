@@ -153,6 +153,87 @@
 
 
 
+<script id="ch0103/15">
+  var n=Number(prompt("请输入苹果数",""))
+  var x=Number(prompt("请输入虫子吃苹果的时间",""))
+  var y=Number(prompt("请输入经过几个小时",""))
+  var h=y/x
+  var s=n-Math.ceil(h)
+  console.log(s)
+</script>
+
+
+
+<script id="ch0103/16">
+  var xa=Number(prompt("请输入A点横坐标",""))
+  var xb=Number(prompt("请输入A点纵坐标",""))
+  var ya=Number(prompt("请输入B点横坐标",""))
+  var yb=Number(prompt("请输入B点纵坐标",""))
+  var xc=ya-xa
+  var yc=yb-xb
+  var c=Math.sqrt(xc**2+yc**2)
+  console.log(c.toFixed(3))
+</script>
+  
+
+
+<script id="ch0103/17">
+  var xa=Number(prompt("请输入A点横坐标",""))
+  var xb=Number(prompt("请输入A点纵坐标",""))
+  
+  var ya=Number(prompt("请输入B点横坐标",""))
+  var yb=Number(prompt("请输入B点纵坐标",""))
+  
+  var za=Number(prompt("请输入c点横坐标",""))
+  var zb=Number(prompt("请输入c点纵坐标",""))  
+  
+  var xy1=ya-xa
+  var xy2=yb-xb
+  var b1=Math.sqrt(xy1**2+xy2**2)
+
+  var xz1=za-xa
+  var xz2=zb-xb
+  var b2=Math.sqrt(xz1**2+xz2**2)
+
+  var yz1=za-ya
+  var yz2=zb-yb
+  var b3=Math.sqrt(yz1**2+yz2**2)
+
+  var p=(b1+b2+b3)/2
+  var s=Math.sqrt(p*(p-b1)*(p-b2)*(p-b3))
+  console.log(s.toFixed(2))
+</script>
+
+
+
+<script id="ch0103/18">
+  var a=Number(prompt("请输入等差数列第一项",""))
+  var b=Number(prompt("请输入等差数列第二项",""))
+  var n=Number(prompt("请输入第几项",""))
+  var c=b-a
+  var d=n+2*(n-1)
+  console.log(d)
+</script>
+
+
+
+<script id="ch0103/19">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var j=a*b
+  console.log(j)
+</script>
+
+
+
+<script script id="ch0103/20">
+  var a=Number(prompt("请输入幂数",""))
+  var m=2**a
+  console.log(m)
+</script>
+
+
+
 <script id="ch0105/01">  //1.求平均年龄
   // debugger;
   var zong=Number(prompt("请输入总人数",""))
