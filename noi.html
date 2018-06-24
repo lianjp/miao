@@ -1,3 +1,158 @@
+<script id="ch0103/01">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var num=a+b
+  Console.log(num)
+</script>
+
+
+
+<script id="ch0103/02">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var c=Number(prompt("请输入第三个数",""))
+  var num=(a+b)*c
+  Console.log(num)
+</script>
+
+
+
+<script id="ch0103/03">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var c=Number(prompt("请输入第三个数",""))
+  var num=(a+b)/c
+  Console.log(num)
+</script>
+
+
+
+<script id="ch0103/04">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var num=a/b
+  var yu=a%b
+  Console.log(num)
+  Console.log(yu)
+</script>
+
+
+
+<script id="ch0103/05">
+  var a=Number(prompt("请输入第一个数",""))
+  var b=Number(prompt("请输入第二个数",""))
+  var zhi=a/b
+  Console.log(zhi.toFixed(9))
+</script>
+
+
+
+<script id="ch0103/06">
+  var a=Number(prompt("请输入确诊数",""))
+  var b=Number(prompt("请输入死亡数",""))
+  var zhi=b/a*100
+  var y=zhi.toFixed(3)+"%"
+  console.log(y)
+</script>
+
+
+
+<script id="ch0103/07">
+  var x=Number(prompt("请输入x的值",""))
+  var a=Number(prompt("请输入a的值",""))
+  var b=Number(prompt("请输入b的值",""))
+  var c=Number(prompt("请输入c的值",""))
+  var d=Number(prompt("请输入d的值",""))
+  var zhi=a*x**3+b*x**2+c*x+d  
+  console.log(zhi.toFixed(7))
+</script>
+
+
+
+<script id="ch0103/08">
+  var f=Number((prompt("请输入华氏温度","")))
+  var c=5*(f-32)/9
+  console.log(c.toFixed(5))
+</script>
+
+
+
+<script id="ch0103/09">
+  var r=Number((prompt("请输入圆的半径",""))) 
+  var d=r*2
+  var c=Math.PI.toFixed(5)*d
+  var s=Math.PI.toFixed(5)*r**2
+  console.log(d.toFixed(4))
+  console.log(c.toFixed(4))
+  console.log(s.toFixed(4))
+</script>
+
+
+
+<script id="ch0103/10">
+  var r1=Number(prompt("请输入第一个电阻",""))
+  var r2=Number(prompt("请输入第二个电阻",""))
+  var r=1/(1/r1+1/r2)
+  console.log(r.toFixed(2))
+</script>
+
+
+
+<script id="ch0103/11">
+  // debugger;
+
+  var a=Number(prompt("请输入第一个数","")) 
+  var b=Number(prompt("请输入第二个数",""))
+  var z=a/b
+  var x=parseInt(z)*b
+  var r=a-x
+  console.log(r.toFixed(4))
+</script>
+
+
+
+<script id="ch0103/12">
+  var r=Number(prompt("请输入球的半径","")) 
+  var v=4/3*Math.PI.toFixed(2)*r**3
+  console.log(v.toFixed(2))
+</script>
+
+
+
+<script id="ch0103/13">
+  //   a/b  得到的是小数不是整数！！！！！
+  var n=Number(prompt("请输入一个三位数",""))
+  var a=n%10                 //个位数
+  var b=parseInt(n%100/10)   //十位数
+  var c=parseInt(n/100)      //百位数
+  var d=a+''+b+c
+  console.log(d)
+</script>
+
+
+
+<script id="ch0103/14">
+  var h=Number(prompt("请输入桶的深度",""))
+  var r=Number(prompt("请输入底面半径",""))
+  var s=Math.PI.toFixed(5)*r**2
+  var v=s*h/1000
+  var z=20/v
+  console.log(Math.ceil(z))
+</script>
+
+
+
+<script id="ch0103/15">
+  var n=Number(prompt("请输入苹果数",""))
+  var x=Number(prompt("请输入虫子吃苹果的时间",""))
+  var y=Number(prompt("请输入经过几个小时",""))
+  var h=y/x
+  var s=n-Math.ceil(h)
+  console.log(s)
+</script>
+
+
+
 <script id="ch0105/01">  //1.求平均年龄
   // debugger;
   var zong=Number(prompt("请输入总人数",""))
