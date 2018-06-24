@@ -336,7 +336,7 @@
 
 
 
-<script id="ch0105/14">  //15.银行利息
+<script id="ch0105/15">  //15.银行利息
   // debugger;
   var r = Number(prompt("请输入年利率",""))
   if (0<=r&&r<=20) {
@@ -353,3 +353,54 @@
     }
   }
 </script>
+
+
+<script id="ch0105/16">  //16.买房子
+  // debugger;
+  var x = 200
+  var n=Number(prompt("请输入年薪",""))
+  if (10<=n&&n<=50) {
+    var k=Number(prompt("请输入每年增长百分之几",""))
+    if (1<=k&&k<=20) {
+      var m = 1
+      var h = n
+      while (h < x) {
+        h = h + n
+        x = x + x * k / 100 
+        m = m + 1
+      }
+      if (m<20) {
+        console.log(m)
+      } else {
+        console.log("Impossible")
+      }
+    }else {
+      alert("输入有误")
+    }
+  }else {
+    alert("输入有误")
+  }
+
+
+</script>
+
+
+
+<script id="ch0105/17">  //17.斐波那契数列
+  // debugger;
+
+  var k=Number(prompt("请输入一个正整数",""))
+  if (1<=k&&k<=46) {
+    var i = 0
+    var a = 1
+    var b = 1
+    var c
+    while (i<(k-2)) {
+      c = a
+      a = b
+      b = a + c
+      i = i + 1
+    }console.log(b)
+  }else {
+    alert("输入有误")
+  }
