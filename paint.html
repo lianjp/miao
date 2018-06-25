@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var cvs = document.querySelector('canvas')
+  var ctx = cvs.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+</script>
+<script>
+  // YOUR CODE GOES HERE
+  var i = 1   
+  while (i < 400) {
+    dot(i,15,'black')
+    i = i + 1    
+  }
+  
+  var a = 0
+  while (a < 400) {
+    if (a % 2 != 0) {
+      dot(a,30,'black')
+    }    
+    a = a + 1
+  }
+  
+  var b = 0
+  while (b < 400) {
+    if (b % 3 != 0) {
+      dot(b,45,'black')
+    }    
+    b = b + 1
+  }
+  
+  var c = 0
+  while (c < 400) {
+    if (c % 4 != 0) {
+      dot(c,60,'black')
+    }    
+    c = c + 1
+  }
+  
+  var d = 0
+  var e = 0
+  while (d < 300&&e < 300) {
+    dot(d,e,'black')
+    e = e + 1
+    d = d + 1
+  }
+
+  var f = 0
+  var g = 0
+  while (f < 400&&g < 300) {
+    dot(f,g,'black')
+    f = f + 1 
+    g = g + 3/4 
+  }
+
+  debugger;
+  var m = 150
+  while (m<200) {    
+    m = m+1
+    var n = 150  //别把嵌套循环的计数器一起声明到外面！！！
+    while (n<200) {
+      dot(m,n,'black')
+      n = n + 1
+    }
+  }
+
+
+  // 错题
+  // var m = 150
+  // var n = 150//里面的计数器声明到这里就错了！！
+  // while (m<200) {    
+  //   m = m+1
+  //   while (n<200) {
+  //     dot(m,n,'black')
+  //     n = n + 1
+  //   }
+  // }
+
+</script>
+</html>
