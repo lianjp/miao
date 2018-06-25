@@ -21,7 +21,7 @@
   var a=Number(prompt("请输入第一个数",""))
   var b=Number(prompt("请输入第二个数",""))
   var c=Number(prompt("请输入第三个数",""))
-  var num=(a+b)/c
+  var num=parseInt((a+b)/c)
   console.log(num)
 </script>
 
@@ -30,7 +30,7 @@
 <script id="ch0103/04">
   var a=Number(prompt("请输入第一个数",""))
   var b=Number(prompt("请输入第二个数",""))
-  var num=a/b
+  var num=parseInt(a/b)
   var yu=a%b
   console.log(num)
   console.log(yu)
@@ -408,6 +408,130 @@
   console.log(y.toFixed(3))
 </script>
 
+
+
+<script id="ch0104/14">
+  var n=Number(prompt("请输入邮件重量"))
+  var m=prompt("请输入是否加急")
+  var x
+  var z
+  if (m=="y") {
+    if (n<1000) {
+      z=8+5
+    }else if (n>1000) {
+      x=(n-1000)/500
+      z=8+5+4*Math.ceil(x)
+    }
+  }else {
+    if (n<1000) {
+      z=8
+    }else if (n>1000) {
+      x=n-1000
+      z=8+4*x
+    }
+  }
+</script>
+
+
+
+<script id="ch0104/15">
+  var a=+prompt()
+  var b=+prompt()
+  var c=+prompt()
+  var d=Math.max(a,b,c)
+  console.log(d)
+</script>
+
+
+
+<script id="ch0104/16">
+  var a=+prompt()
+  var b=+prompt()
+  var c=+prompt()
+  if (a**2+b**2==c**2 || a**2+c**2==b**2 || b**2+c**2==a**2) {
+    console.log("yes")
+  }else {
+    console.log("no")
+  }
+</script>
+
+
+
+<script id="ch0104/17">
+  var a=+prompt()
+  if (a%4==0&&a%100!=0||a%400==0) {
+    console.log("Y")    
+  } else {
+    console.log("N")
+  }
+</script>
+
+
+
+<script id="ch0104/18">
+  var x=+prompt()
+  var y=+prompt()
+  if (-1<=x&&x<=1) {
+    if (-1<=y&&y<=1) {
+      console.log("yes")
+    }else {
+      console.log("no")
+    }
+  }else {
+    console.log("no")
+  }
+</script>
+
+
+
+<script id="ch0104/19">
+  var a=+prompt()
+  var b=+prompt()
+  var c=prompt()
+  if (c=="+") {
+    a=a+b    
+  }else if (c=="-") {
+    a=a-b
+  }else if (c="*") {
+    a=a*b
+  }else if (c="/") {
+    a=a/b
+  }console.log(a)
+</script>
+
+
+
+<script id="ch0104/20">
+  var a=+prompt()
+  var b=+prompt()
+  var c=+prompt()
+  var x1
+  var x2
+  if (b**2==4*a*c) {
+    x1 = x2 = -b/(2*a)
+    console.log(x1)
+  }
+  if (b**2>4*a*c) {
+    x1 =(-b + Math.sqrt(b**2-4*a*c))/(2*a)
+    x2 =(-b - Math.sqrt(b**2-4*a*c))/(2*a)
+    console.log(x1)
+    console.log(x2)
+  }
+  if (b**2<4*a*c) {
+    x1=(-b/(2*a)).toFixed(5)+"+"+(Math.sqrt(4*a*c-b**2)/(2*a)).toFixed(5)+"i"
+    x2=(-b/(2*a)).toFixed(5)+"-"+(Math.sqrt(4*a*c-b**2)/(2*a)).toFixed(5)+"i"
+    console.log(x1)
+    console.log(x2)
+  }
+</script>
+
+
+
+<script>
+  
+
+  
+</script>
 
 
 
