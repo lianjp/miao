@@ -944,3 +944,112 @@
   }else {
     alert("输入有误")
   }
+
+
+
+<script  id="sort">
+  var a=+prompt()
+  var b=+prompt()
+  var c=+prompt()
+  var max=Math.max(a,b,c) 
+  var min=Math.min(a,b,c)
+  var zhong=a+b+c-max-min
+  console.log(min)
+  console.log(zhong)
+  console.log(max)
+</script>
+
+
+
+<script id="narcissistic">
+  var n=prompt()
+  var m=n.length
+  var a=0
+  for (var i=1;i<=m;i++) {
+    var p=m-i
+    var chu=10**p
+    var yu=parseInt(Number(n)/chu) % 10 
+    a=a+yu**m
+    if (a==n) {
+      console.log(a)
+    }
+  }
+</script>
+
+
+
+<script id="narcissistics">
+  for (var i=100;i<=100000;i++) {
+    var z=""+i
+    var m=z.length
+    var a=0
+    for (var x=1;x<=m;x++) {
+      var p=m-x
+      var chu=10**p
+      var yu=parseInt(Number(i)/chu) %10
+      a=a+yu**m
+      if (a==i) {
+        console.log(a)
+      }
+    }
+  }
+</script>
+
+
+
+<script>
+  var a=0
+  for(x=1;x<=9;x++) {
+    for (y=1;y<=x;y++) {
+        var a=x*y
+        console.log(x+"*"+y+"="+a)
+    }
+  } 
+</script>
+
+
+
+<script id="palindrom">
+  var a=prompt()
+  var b=a.length 
+  var fan=""
+  for (i=1;i<=b;i++) {
+    var p=b-i
+    var chu=10**p
+    var yu=parseInt(Number(a)/chu) % 10 
+    var fan=yu+fan
+  } 
+  var zhi1=parseInt(fan)
+  var zhi2=parseInt(a)
+  if (zhi1==zhi2) {
+    console.log("是回文数")
+  }
+</script>
+
+
+
+<script>
+  var a=+prompt()
+  var b=+prompt()
+
+
+</script>
+
+
+<script id="complete-number">
+  for (i=1;i<10000;i++) {
+    var a=0
+    for (z=1;z<i;z++) {
+      if(i%z==0) {
+        a=a+z
+        if (a==i) {
+          console.log(i)
+        }
+      }
+    }
+  }
+</script>
+
+
+
+<script >
