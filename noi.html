@@ -430,6 +430,7 @@
       z=8+4*x
     }
   }
+  console.log(z)
 </script>
 
 
@@ -520,17 +521,19 @@
   if (b**2<4*a*c) {
     x1=(-b/(2*a)).toFixed(5)+"+"+(Math.sqrt(4*a*c-b**2)/(2*a)).toFixed(5)+"i"
     x2=(-b/(2*a)).toFixed(5)+"-"+(Math.sqrt(4*a*c-b**2)/(2*a)).toFixed(5)+"i"
-    console.log(x1)
-    console.log(x2)
+    console.log("x1="+x1+"/;x2="+x2)
   }
 </script>
 
 
 
-<script>
-  
-
-  
+<script id="ch0104/21">
+  var n=+prompt()
+  var x=+prompt()
+  var y=+prompt()
+  var h=Math.ceil(y/x)
+  var s=n-h
+  console.log(s)
 </script>
 
 
