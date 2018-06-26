@@ -947,6 +947,64 @@
 </script>
 
 
+
+<script id="ch0105/18">
+  var n=+prompt("请输入数据个数")
+  var x1=+prompt("请输入鸡尾酒疗法总病例数")
+  var y1=+prompt("请输入鸡尾酒疗法有效病例数")
+  var lv1=y1/x1*100
+  var i=0
+  while (i<n-1) {
+    var x=+prompt("请输入其他疗法总病例数")
+    var y=+prompt("请输入其他疗法有效病例数")
+    var lv=y/x*100
+    if (lv-lv1>5) {
+      console.log("better")
+    }else if (lv-lv1<-5) {
+      console.log("worse")
+    }else {
+      console.log("same")
+    }
+    i=i+1
+  }
+</script>
+
+
+
+<script id="ch0105/19">
+  var sj=0
+  var n=+prompt("请输入屋顶数")
+  for (i=0;i<n;i++) {
+    var a=+prompt("请输入第"+(i+1)+"个屋顶的横坐标位置")
+    var b=+prompt("请输入第"+(i+1)+"个屋顶的纵坐标位置")
+    var c=Math.sqrt(a**2+b**2)
+    var r=+prompt("请输入第"+(i+1)+"个屋顶的人数")
+    var sj=sj+c*2/50+1.5*r
+  }console.log(Math.ceil(sj))
+</script>
+
+
+
+<script id="ch0105/20">
+  var h1=0
+  var z=0
+  var s=0
+  var h=+prompt("请输入小球的初始高度")
+  var yh=h
+  for (i=0;i<10;i++) {
+    h=h/2
+    h1=h1+h
+    if (i==9) {
+      s=h
+    }
+  }
+  z=h1*2+yh
+  console.log(z.toFixed(4))
+  console.log(s)
+</script>
+
+
+
 <script id="sort">
   var a=+prompt()
   var b=+prompt()
