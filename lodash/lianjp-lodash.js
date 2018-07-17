@@ -22,5 +22,15 @@ var lianjp = {
       ary[i]=array[i+n]
     }
     return ary
+  },
+
+  dropRight: function (array,n = 1) {
+    var ary=[]
+    var l=array.length
+    for(i=0;i<l-n;i++) {
+      ary[i]=array[i]
+    }
+    return ary
   }
+
 }
