@@ -4,15 +4,16 @@ var lianjp = {
   },
 
   compact: function (array) {
-    var l=array.length
+    var ary=array.slice()
+    var l=ary.length
     for(i=0;i<l;i++) {
-      if(array[i]===false||array[i]===null||array[i]===0||array[i]===""||array[i]===''||array[i]===null||isNaN(array[i])) {
-        array.splice(i,1)
+      if(ary[i]===false||ary[i]===null||ary[i]===0||ary[i]===""||ary[i]===''||ary[i]===null||isNaN(ary[i])) {
+        ary.splice(i,1)
         l=l-1
         i=i-1
       }
     }
-    return array
+    return ary
   },
 
   drop: function (array,n = 1) {
@@ -34,14 +35,34 @@ var lianjp = {
   },
 
   fill: function(array, value, start = 0, end = array.length) {
+    var ary=array.slice()
     for (i=start;i<end;i++) {
-      array[i]=value
+      ary[i]=value
     }
-    return array
+    return ary
   },
 
   head: function(array) {
     return array[0]
-  }
+  },
+
+  indexOf: function(array,value,fromIndex = 0) {
+    for(i=fromIndex;i<array.length;i++) {
+      if(array[i]===value) {
+        return i
+      }
+    }
+  },
+
+  initial: function(array) {
+    var l=array.length
+    var ary=[]
+    for(i=0;i<l-1;i++) {
+      ary[i]=array[i]
+    }
+    return ary
+  },
+
+  intersection:([arrays])
     
 }
