@@ -63,6 +63,37 @@ var lianjp = {
     return ary
   },
 
-  intersection:([arrays])
+  // intersection: function (arrays) {
+  //     var ary=arrays.slice()
+  //     var l=ary.length
+  //     var min=Infinity
+  //     for(i=0;i<l;i++) {
+  //       if(ary[i].length<min) {
+  //         min=ary[i].length
+  //         var zhi=i
+  //         break
+  //       }
+  //     }
+
+  //     var count=0
+  //     var ary2=[]
+  //     for(j=0;j<min;j++) {
+  //       for(k=0;k<l;k++) {
+  //         if(ary[k].indexOf(ary[zhi][j])!==-1) {
+  //           count+=1
+  //         }
+  //       } 
+  //       if(count=l) {
+  //         ary2.push(ary[zhi][j])
+  //         for(r=0;r<l;r++) {
+  //           var index=ary[r].indexOf(ary[zhi][j])
+  //           ary.splice(index,1)
+  //           l=l-1          
+  //         }
+
+  //       }       
+  //     }
+      
+  // }
     
 }
