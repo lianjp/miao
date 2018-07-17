@@ -31,6 +31,17 @@ var lianjp = {
       ary[i]=array[i]
     }
     return ary
-  }
+  },
 
+  fill: function(array, value, start = 0, end = array.length) {
+    for (i=start;i<end;i++) {
+      array[i]=value
+    }
+    return array
+  },
+
+  head: function(array) {
+    return array[0]
+  }
+    
 }
