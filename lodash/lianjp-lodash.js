@@ -190,7 +190,7 @@ var lianjp = {
     var result = []
     for(var i=0;i<array.length;i++) {
       if(Array.isArray(array[i])) {
-        var tmp = flattenDeep(array[i])
+        var tmp = lianjp.flattenDeep(array[i])
         result = [...result, ...tmp]
       } else {
         result.push(array[i])
@@ -208,7 +208,7 @@ var lianjp = {
 
     for(var i=0;i<array.length;i++) {
       if(Array.isArray(array[i])) {
-        var tmp = flattenDeep(array[i], depth-1)
+        var tmp = lianjp.flattenDepth(array[i], depth-1)
         result = [...result, ...tmp]
       } else {
         result.push(array[i])
