@@ -106,8 +106,13 @@ var lianjp = {
 
   join: function (array,separator = ',') {
     var ary=""
-    for(i=0;i<length;i++) {
-      ary=ary+array[i]+separator
+    for(i=0;i<array.length;i++) {
+      if(i<array.length-1) {
+        ary=ary+array[i]+separator
+      }      
+      if(i===array.length-1) {
+        ary=ary+array[i]
+      }
     }
     return ary
   },
@@ -117,6 +122,9 @@ var lianjp = {
   },
 
   lastIndexOf: function (array, value, fromIndex = array.length-1) {
+    if(fromIndex<0) {
+      return -1
+    }
     for(i=fromIndex; i>0; i--) {
       if(array[i]===value) {
         return i
@@ -124,7 +132,7 @@ var lianjp = {
     }
   },
 
-  nth: function (array, n = 0) {
+  nth: function (array, n = 0) {    
     if(n>0) {      
       return array[n]      
     }else if(n<0) {
