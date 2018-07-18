@@ -16,6 +16,10 @@ var lianjp = {
     return ary
   },
 
+  // difference: function (array,...values) {
+       
+  // },
+
   drop: function (array,n = 1) {
     var ary=[]
     var l=array.length
@@ -168,6 +172,50 @@ var lianjp = {
     return dividend/divisor
   },
 
+  flatten: function (array) {
+    var result=[]
+    for(i=0;i<array.length;i++) {
+      if(!Array.isArray(array[i])) {
+        result.push(array[i])
+      }else {
+        for(var j = 0;j<array[i].length; j++) {
+          result.push(array[i][j])
+        }
+      }
+    }
+    return result  
+  },
+
+  flattenDeep: function (array) {
+    var result = []
+    for(var i=0;i<array.length;i++) {
+      if(Array.isArray(array[i])) {
+        var tmp = flattenDeep(array[i])
+        result = [...result, ...tmp]
+      } else {
+        result.push(array[i])
+      }
+    }
+    return result
+  },
+
+  flattenDepth: function (array, depth = 1) {
+    if(depth === 0) {
+      return array.slice()
+    }
+
+    var result = []
+
+    for(var i=0;i<array.length;i++) {
+      if(Array.isArray(array[i])) {
+        var tmp = flattenDeep(array[i], depth-1)
+        result = [...result, ...tmp]
+      } else {
+        result.push(array[i])
+      }
+    }
+    return result
+  },
   
     
 }
