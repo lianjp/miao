@@ -52,6 +52,7 @@ var lianjp = {
         return i
       }
     }
+    return -1
   },
 
   initial: function(array) {
@@ -122,14 +123,22 @@ var lianjp = {
   },
 
   lastIndexOf: function (array, value, fromIndex = array.length-1) {
-    if(fromIndex<0) {
+    if(fromIndex<0 && Math.abs(fromIndex)>value) {
       return -1
     }
-    for(i=fromIndex; i>0; i--) {
+    if(fromIndex>0) {
+      for(i=fromIndex; i>0; i--) {
       if(array[i]===value) {
         return i
       }
+      }
+    }else if(fromIndex<0) {
+      for(j=array.length+fromIndex; j>0; j--) {
+        return j
+      }
     }
+    
+    return -1
   },
 
   nth: function (array, n = 0) {    
@@ -139,5 +148,26 @@ var lianjp = {
       return array[array.length+n]
     }
   },
+
+  sum: function (array) {
+    sum=0
+    for(i=0;i<array.length;i++) {
+      sum += array[i]
+    }
+    return sum
+  },
+
+  ceil: function (number, precision = 0) {
+    var quan=10**precision
+    number=Math.ceil(number*quan)
+    number=number/quan
+    return number
+  },
+
+  divide: function (dividend, divisor) {
+    return dividend/divisor
+  },
+
+  
     
 }
