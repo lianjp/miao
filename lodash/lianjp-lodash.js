@@ -161,6 +161,18 @@ var lianjp = {
     return sum
   },
 
+  identity: function (v) {
+    return v
+  },
+
+  sumBy: function (ary,iteratee = lianjp.identity) {
+    var result = 0
+    for(i=0;i<ary.lenght;i++) {
+      result += iteratee(ary[i])          
+    }
+    return result
+  },
+
   ceil: function (number, precision = 0) {
     var quan=10**precision
     number=Math.ceil(number*quan)
@@ -217,5 +229,12 @@ var lianjp = {
     return result
   },
   
+  formPairs: function (...pairs) {
+    var obj={}
+    for(i=0; i<arguments.length; i++) {
+      obj[arguments[i][0]]=arguments[i][1]
+    }
+    return obj
+  }
     
 }
