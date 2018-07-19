@@ -142,3 +142,138 @@ function flatten2(ary) {
     }
     return result
   }
+
+  //7/19
+  function keyBy(ary, key) {
+    var obj={}
+    for(var item of ary) {
+      obj[item[key]] = item
+    }
+    return obj
+  }
+
+  function groupBy(ary, propName) {
+    var map = {}
+    for(var item of ary) {
+      if (item[propName] in map) {
+        map[item[propName]].push(item)
+      } else {
+        map[item[propName]] = [item]
+      }
+    }
+    return map
+  }
+
+  function groupBy(ary, predicate) {
+    var map = {}
+    for(var item of ary) {
+      var key = predicate(item)
+      if (key in map) {
+        map[key].push(item)
+      } else {
+        map[key] = [item]
+      }
+    }
+    return map
+  }
+
+  function groupBy(ary, predicate) {
+    return ary.reduce((map, item) => {
+      var key = predicate(item)
+      if(key in map) {
+        map[key].push(item)
+      }else {
+        map[key] = [item]
+      }
+      return map
+    },{})
+  }
+
+  function dnaShare(name) {
+    if(name === null) {
+      return 0
+    }
+    if(name === 'Pauwels van Haverbeke') {
+      return 1
+    }
+
+    var peoplr = byName[name]
+    if (!peoplr) {
+      return 0
+    }
+    var from_mother = dnaShare(peoplr.mother) / 2
+    var from_father = dnaShare(peoplr.father) / 2
+    return form_mother + from_father
+  }
+
+  function bind(f) {
+    var fixedArgs = []
+    for(var o = 1; i < arguments.length; i++) {
+      fixedArfs.push(arguments[i])
+    }
+    return function() {
+      var args = []
+      for(var i = 0; i<arguments.length; i++) {
+        args.push(arguments[i])
+      }
+      return f.apply(null, fixedArgs.concat(args))
+    }
+  }
+
+  function bind (f, ...fixedArgs) {
+    return function(...args) {
+      return f(...fixedArgs, ...args)
+    }
+  }
+
+  function after(n, func) {
+    var c=0
+    return function(...args) {      
+      c++
+      if(c >= n) {
+        return func(...args)
+      }
+    }
+  }
+
+  function before(n, func) {
+    var c=0
+    var lastResult
+    return function(...args) {      
+      c++
+      if(c < n) {
+        lastResult = func(...args)
+      }
+      return lastResult
+    }
+  }
+
+  function ary(func, n = func.length) {
+    return function(...args) {
+      return func(...args.slice(0,n))
+    }
+  }
+
+  function unary(func) {
+    return function(value) {
+      return func(value)
+    }
+  }
+
+  function flip(func) {
+    return function(...args) {
+      return func(...args.reverse())
+    }
+  }
+
+  function negate(func) {
+    return function(...args) {
+      return !func(...args)
+    }
+  }
+
+  function spread (func) {
+    return  function (ary) {
+      return func.apply(null,ary)
+    }
+  }

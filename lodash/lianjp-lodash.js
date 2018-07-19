@@ -235,6 +235,24 @@ var lianjp = {
       obj[arguments[i][0]]=arguments[i][1]
     }
     return obj
+  },
+
+  spread: function (func) {
+    return  function (ary) {
+      return func.apply(null,ary)
+    }
+  },
+
+  negate: function (func) {
+    return function(...args) {
+      return !func(...args)
+    }
+  },
+
+  pull: function(array, ...values) {
+    var ary=[]
+    ary = arry.filter(item =>  !include(item)>-1)
+    return ary
   }
     
 }
