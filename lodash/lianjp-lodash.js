@@ -18,7 +18,7 @@ var lianjp = {
 
   difference: function (array,...values) { 
     var ary=[].concat(...values)
-    return array.filter(item => !ary.includes(item) > -1)
+    return array.filter(item => !ary.includes(item))
   },
 
   drop: function (array,n = 1) {
@@ -252,7 +252,7 @@ var lianjp = {
 
   pull: function(array, ...values) {
     var ary=[].concat(...values)
-    return array.filter(item =>  ary.includes(item)>-1)    
+    return array.filter(item =>  ary.includes(item))    
   },
 
   // includes: function(collection, value, fromIndex = 0) {
