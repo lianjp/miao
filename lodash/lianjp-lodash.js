@@ -251,7 +251,7 @@ var lianjp = {
 
   pull: function(array, ...values) {
     var ary=[]
-    ary = arry.filter(item =>  !include(item)>-1)
+    ary = array.filter(item =>  !include(item)>-1)
     return ary
   }
     
