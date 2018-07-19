@@ -16,9 +16,10 @@ var lianjp = {
     return ary
   },
 
-  // difference: function (array,...values) {
-       
-  // },
+  difference: function (array,...values) { 
+    var ary=[].concat(...values)
+    return array.filter(item => !ary.includes(item) > -1)
+  },
 
   drop: function (array,n = 1) {
     var ary=[]
