@@ -251,8 +251,12 @@ var lianjp = {
 
   pull: function(array, ...values) {
     var ary=[]
-    ary = array.filter(item =>  !include(item)>-1)
+    ary = array.filter(item =>  !includes(item)>-1)
     return ary
-  }
+  },
+
+  // includes: function(collection, value, fromIndex = 0) {
+    
+  // }
     
 }

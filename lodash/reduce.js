@@ -277,3 +277,16 @@ function flatten2(ary) {
       return func.apply(null,ary)
     }
   }
+
+  function includes(ary, val) {
+    if (val !== val) {
+      for(var i = 0; i<ary.length; i++) {
+        if (ary[i] !== ary[i]) {
+          return true
+        }
+      }
+      return false
+    }
+  
+    return ary.indexOf(val) !== -1
+  }
