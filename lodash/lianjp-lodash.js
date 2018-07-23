@@ -252,7 +252,7 @@ var lianjp = {
 
   pull: function(array, ...values) {
     var ary=[].concat(...values)
-    return array.filter(item =>  ary.includes(item))    
+    return array.filter(item =>  !ary.includes(item))    
   },
 
   // includes: function(collection, value, fromIndex = 0) {
