@@ -84,7 +84,7 @@ var lianjp = {
     )
     
     return obj             
-}
+  },
   // reduce: function (ary, reduce, initialValue) {
   //   for(var i=0;i<ary.length;i++) {
   //     initialValue = reduce(initialValue,ary[i])
