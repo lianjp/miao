@@ -69,40 +69,22 @@ var lianjp = {
     return ary
   },
 
-  // intersection: function (...Array) {      
-  //     var l=arguments.length
+  intersection: function(array,...arrays) {
+    var ary=[].concat(...arrays)
+    return array.filter(item => ary.includes(item))
+  },
 
-  //     var min=Infinity
-  //     for(i=0;i<l;i++) {
-  //       if(arguments[i].length<min) {
-  //         min=arguments[i].length
-  //         var ary=arguments[i]          
-  //       }
-  //     }
+  formPairs: function (pairs) {
 
-  //     var count=0
-  //     var ary2=[]
-  //     for(j=0;j<min;j++) {
-  //       for(k=0;k<l;k++) {
-  //         if(arguments[k].indexOf(ary[j])!==-1) {
-  //           count+=1
-  //         }
-  //       } 
-  //       if(count=l) {
-  //         ary2.push(ary[j])
-  //         for(r=0;r<l;r++) {
-  //           var index=arguments[r].indexOf(ary[j])
-  //           ary.splice(index,1)
-  //           l=l-1
-  //           r=r-1          
-  //         }
+    var obj = {}
+        
+    pairs.forEach(function(item,index) 
 
-  //       }       
-  //     }
-  //     return ary2
-      
-  // }
+    {obj[pairs[index][0]] = pairs[index][1]}
+    )
     
+    return obj             
+}
   // reduce: function (ary, reduce, initialValue) {
   //   for(var i=0;i<ary.length;i++) {
   //     initialValue = reduce(initialValue,ary[i])
