@@ -2,8 +2,8 @@ var lianjp = {
   chunk: function(array, size) {
     var ary1=array.slice()
     var ary2=[]
-    for(i=0;i<ary1.length;i++) {
-      if(array!=0) {
+    for(i=0;i<=ary1.length;i++) {
+      if(ary1!=0) {
         ary2.push(ary1.splice(0,size))
       }
     }
@@ -27,6 +27,8 @@ var lianjp = {
     var ary=[].concat(...values)
     return array.filter(item => !ary.includes(item))
   },
+
+  // differenceBy: function(array,[values],)
 
   drop: function (array,n = 1) {
     var ary=[]
