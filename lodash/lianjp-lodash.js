@@ -1,6 +1,13 @@
 var lianjp = {
   chunk: function(array, size) {
-
+    var ary1=array.slice()
+    var ary2=[]
+    for(i=0;i<ary1.length;i++) {
+      if(array!=0) {
+        ary2.push(ary1.splice(0,size))
+      }
+    }
+    return ary2
   },
 
   compact: function (array) {
