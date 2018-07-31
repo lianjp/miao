@@ -1,6 +1,5 @@
-function Array(ary) {
-  this.ary=ary
-  
+function MyArray(ary) {
+  this.ary=ary  
 }
 
 Array.prototype = {
@@ -14,7 +13,7 @@ Array.prototype = {
   },
 
   concat: function(...val) {    
-    l=arguments.length
+    var l=arguments.length
     for(j=0;j<l;j++) {      
       this.ary.push(arguments[j])
     }
@@ -22,7 +21,7 @@ Array.prototype = {
   },
 
   every: function(f) {
-    l=this.length()
+    var l=this.length()
     for(i=0;i<l;i++) {
       if(f(this.ary[i])){
         continue
@@ -34,7 +33,7 @@ Array.prototype = {
   },
 
   filter: function(f) {
-    var ary=[]
+    var var ary=[]
     l=this.length()
     for(i=0;i<l;i++) {
       if(f(this.ary[i])) {
@@ -45,7 +44,7 @@ Array.prototype = {
   },
 
   forEach: function(f) {
-    l=this.length()
+    var l=this.length()
     for(i=0;i<l;i++) {
       this.ary[i]=f(this.ary[i])
     }
@@ -53,7 +52,7 @@ Array.prototype = {
   },
 
   indexOf: function(value,start = 0) {
-    l=this.length()
+    var l=this.length()
     for(i=start;i<l;i++) {
       if(this.ary[i]===value) {
         return i
@@ -72,7 +71,7 @@ Array.prototype = {
   },
 
   lastIndexOf: function(value,start = 0) {
-    l=this.length()
+    var l=this.length()
     for(i=l-1;i>=0;i--) {
       if(this.ary[i]===value) {
         return i
@@ -159,7 +158,7 @@ Array.prototype = {
   },
 
   some: function(f) {
-    l=this.length()
+    var l=this.length()
     for(i=0;i<l;i++) {
       if(f(this.ary[i])){
         return true
