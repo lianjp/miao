@@ -28,7 +28,7 @@ var lianjp = {
     return array.filter(item => !ary.includes(item))
   },
 
-  differenceBy: function(array,...values,iteratee=lianjp.identity) {
+  differenceBy: function(array, ...values, iteratee = lianjp.identity) {
     var ary=[].concat(...values)
     var l=ary.length
     var ary2=[]
@@ -37,7 +37,7 @@ var lianjp = {
     for(i=0;i<l2;i++) {
       ary2.push(iteratee(array[i]))
     }
-    for(i=0;i<l2;i++) {
+    for(i=0;i<l;i++) {
       ary3.push(iteratee(array[i]))
     }
     return ary2.filter(item => !ary3.includes(item))    
