@@ -246,6 +246,43 @@ var lianjp = {
     return array.filter(item =>  !ary.includes(item))    
   },
 
+  reverse: function(array) {
+    let l=array.length
+    let ary=[]
+    for(i=l-1;i>0;i--) {
+      ary.push(array[i])
+    }
+    return ary
+  },
+
+  slice: function(array, start = 0, end = array.length) {
+    let ary=[]
+    for(i=srart;i<end;i++) {
+      ary.push(array[i])
+    }
+    return ary
+  },
+
+  sortedIndex: function(array, value) {
+    let l=array.length
+    for(i=0;i<l;i++) {
+      if(value<array[i]) {
+        return i
+      }
+    }
+  },
+
+  uniq: function(array) {
+    let l=array.length
+    let ary=[]
+    for(i=0;i<l;i++) {
+      if(ary.indexOf(array[i]) != -1) {
+        ary.push(array[i])
+      }
+    }
+    return ary
+  }
+
   // includes: function(collection, value, fromIndex = 0) {
     
   // }
