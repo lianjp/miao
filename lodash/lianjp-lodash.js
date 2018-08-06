@@ -249,7 +249,7 @@ var lianjp = {
   reverse: function(array) {
     let l=array.length
     let ary=[]
-    for(i=l-1;i>0;i--) {
+    for(i=l-1;i>=0;i--) {
       ary.push(array[i])
     }
     return ary
@@ -266,7 +266,7 @@ var lianjp = {
   sortedIndex: function(array, value) {
     let l=array.length
     for(i=0;i<l;i++) {
-      if(value<array[i]) {
+      if(value<=array[i]) {
         return i
       }
     }
@@ -276,7 +276,7 @@ var lianjp = {
     let l=array.length
     let ary=[]
     for(i=0;i<l;i++) {
-      if(ary.indexOf(array[i]) != -1) {
+      if(ary.indexOf(array[i]) == -1) {
         ary.push(array[i])
       }
     }
