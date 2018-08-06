@@ -28,7 +28,20 @@ var lianjp = {
     return array.filter(item => !ary.includes(item))
   },
 
-  // differenceBy: function(array,[values],)
+  differenceBy: function(array,...values,iteratee=lianjp.identity) {
+    var ary=[].concat(...values)
+    var l=ary.length
+    var ary2=[]
+    var l2=array.length
+    var ary3=[]
+    for(i=0;i<l2;i++) {
+      ary2.push(iteratee(array[i]))
+    }
+    for(i=0;i<l2;i++) {
+      ary3.push(iteratee(array[i]))
+    }
+    return ary2.filter(item => !ary3.includes(item))    
+  },
 
   drop: function (array,n = 1) {
     var ary=[]
@@ -296,6 +309,12 @@ var lianjp = {
     }
     return ary
   },
+
+  property: function(path) {
+    return function(obj) {
+      return obj.path
+    }
+  }
 
   // includes: function(collection, value, fromIndex = 0) {
     
