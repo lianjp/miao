@@ -281,7 +281,21 @@ var lianjp = {
       }
     }
     return ary
-  }
+  },
+
+  union: function(arrays) {
+    let ary = []
+    let l = arguments.length
+    for(i=0;i<l;i++) {
+      let l2 = arguments[i].length
+      for(j=0;j<length;j++) {
+        if(ary.indexOf(arguments[i][j]) == -1) {
+          ary.push(arguments[i][j])
+        }
+      }
+    }
+    return ary
+  },
 
   // includes: function(collection, value, fromIndex = 0) {
     
