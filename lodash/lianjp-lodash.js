@@ -317,7 +317,53 @@ var lianjp = {
     return function(obj) {
       return obj.path
     }
+  },
+
+  camelCase: function(string = '') {
+    let str = string.replace(/\w/g,function(str) {
+      return str.toLowerCase()
+    }).replace(/\b[a-zA-Z]|(?<=_)[A-Za-z]/g,function(str) {
+      return str.toUpperCase()
+    }).replace(/[-_ ]/g,'').replace(/\b\w/,function(str) {
+      return str.toLowerCase()
+    })
+    return str
+  },
+
+  capitalize: function(string = '') {
+    let str = string.replace(/\w/g,function(str) {
+      return str.toLowerCase()
+    }).replace(/\b\w/,function(str) {
+      return str.toUpperCase()
+    })
+    return str
+  },
+
+  endsWith: function(string = "", target, position = string.length) {
+    if(string.charAt(position-1) == target) {
+      return true
+    }else {
+      return false
+    }
+  },
+
+  kebabCase: function(string = "") {
+    let str = string.replace(/(?<=[a-z])(?=[A-Z])| |(?<=[A-Z])_(?=[A-Z])/g,'-').replace(/\w/g,function (str) {
+      return str.toLowerCase()
+    }).replace(/[_ ]/g,'')
+    return str
+  },
+
+  lowerCase: function(string = "") {
+    let str = string.replace(/(?<=[a-z])(?=[A-Z])|(?<=[A-Z])_(?=[A-Z])|(?<=[a-z])-(?=[A-Z])/g,' ').replace(/\w/g,function (str) {
+      return str.toLowerCase()
+    }).replace(/[-_]/g,'')
+    return str
   }
+
+  // escape: function(string = "") {
+  //   let str = string.replace()
+  // }
 
   // includes: function(collection, value, fromIndex = 0) {
     
