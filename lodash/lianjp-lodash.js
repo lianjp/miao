@@ -324,7 +324,7 @@ var lianjp = {
       return str.toLowerCase()
     }).replace(/\b[a-zA-Z]|(?<=_)[A-Za-z]/g,function(str) {
       return str.toUpperCase()
-    }).replace(/[-_ ]/g,'').replace(/\b\w/,function(str) {
+    }).replace(/[-_]|\s/g,'').replace(/\b\w/,function(str) {
       return str.toLowerCase()
     })
     return str
@@ -348,7 +348,7 @@ var lianjp = {
   },
 
   kebabCase: function(string = "") {
-    let str = string.replace(/(?<=[a-z])(?=[A-Z])| |(?<=[A-Z])_(?=[A-Z])/g,'-').replace(/\w/g,function (str) {
+    let str = string.replace(/(?<=[a-z])(?=[A-Z])|\s|(?<=[A-Z])_(?=[A-Z])/g,'-').replace(/\w/g,function (str) {
       return str.toLowerCase()
     }).replace(/[_ ]/g,'')
     return str
