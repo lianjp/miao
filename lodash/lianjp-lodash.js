@@ -359,6 +359,40 @@ var lianjp = {
       return str.toLowerCase()
     }).replace(/[-_]/g,'')
     return str
+  },
+
+  lowerFirst: function(string = "") {
+    return string.replace(/\b[A-Z]/,function(str) {
+      return str.toLowerCase()
+    })
+  },
+
+  pad: function(string = "", length = 0, chars = " ") {
+    let l=string.length
+    if(l>length) {
+      return string
+    }else if(l<length) {
+      
+    }
+  },
+
+  padEnd: function(string = "", length = 0, chars = " ") {
+    let str = ''
+	  if(string.length >= length) {
+      return string
+    }else if(string.length < length) {
+      do {
+        string = string + chars
+      }while(string.length < length)
+    }     
+    if(string.length > length) {
+     str = string.slice(0,length)
+    }else if(string.length = length) {
+      return string
+    }
+    if(str.length = length) {
+      return str
+    }
   }
 
   // escape: function(string = "") {
