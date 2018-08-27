@@ -393,11 +393,173 @@ var lianjp = {
     if(str.length = length) {
       return str
     }
-  }
+  },
 
-  // escape: function(string = "") {
-  //   let str = string.replace()
-  // }
+  padStart: function(string = "", length = 0, chars = " ") {
+    let str = ''
+	  if(string.length >= length) {
+      return string
+    }else if(string.length < length) {
+      let nChars = ''
+      for(var item of chars) {
+        nChars = item + nChars
+      }
+      do {
+        string = nChars + string
+      }while(string.length < length)
+    }     
+    if(string.length > length) {
+     str = string.slice(-length)
+    }else if(string.length = length) {
+      return string
+    }
+    if(str.length = length) {
+      return str
+    }
+  },
+
+  parseInt: function(string, radix = 10) {
+    if (radix == 0 | radix == 10) {
+      let num = +string
+      let yu
+      let zhi = ''
+      do {
+        yu = num%10
+        zhi = yu + zhi
+        num = (num - yu)/10
+      }while (num != 0)
+      return +zhi
+    }
+
+    function tenTo2(string) {
+      let num = +string
+      let yu
+      let zhi = ''
+      do {
+        yu = num%2
+        zhi = yu + zhi
+        num = (num - yu)/2
+      }while (num != 0)
+      return +zhi
+    }
+
+    function tenTo8(string) {
+      let num = +string
+      let yu
+      let zhi = ''
+      do {
+        yu = num%8
+        zhi = yu + zhi
+        num = (num - yu)/8
+      }while (num != 0)
+      return +zhi
+    }
+    if (radix == 2) {
+      return tenTo2(string)
+    }
+    if (radix == 8) {
+      return tenTo8(string)
+    }
+    if(radix == 16) {
+      let num = tenTo2(string)
+      let str = "" + num
+      let l = str.length
+      let ary=[]
+      for (let i=4; i<l; i += 4) {
+        ary.push(str.slice(-i))
+      }
+    }
+  },
+
+  escape: function(string = "") {
+    let ary = string.replace(",")
+    let l = ary.length
+    for(let i = 0; i<l; i++) {
+      if(ary[i] == ">") {
+        ary[i] == "&gt"
+      }
+      if(ary[i] == "<") {
+        ary[i] == "&lt"
+      }
+      if(ary[i] == "&") {
+        ary[i] == "&amp"
+      }
+      if(ary[i] == '"') {
+        ary[i] == "&quot"
+      }
+      if(ary[i] == "'") {
+        ary[i] == "&#39"
+      }
+    }
+  },
+
+  escapeRegExp: function(string = "") {
+    let ary = string.replace(",")
+    let l = ary.length
+    for(let i = 0; i<l; i++) {      
+      if(ary[i] == "^") {
+        ary[i] == "\\^"
+      }
+      if(ary[i] == "$") {
+        ary[i] == "\\$"
+      }
+      if(ary[i] == ".") {
+        ary[i] == "\\."
+      }
+      if(ary[i] == "*") {
+        ary[i] == "\\*"
+      }
+      if(ary[i] == "+") {
+        ary[i] == "\\+"
+      }
+      if(ary[i] == "?") {
+        ary[i] == "\\?"
+      }
+      if(ary[i] == "(") {
+        ary[i] == "\\("
+      }
+      if(ary[i] == ")") {
+        ary[i] == "\\)"
+      }
+      if(ary[i] == "[") {
+        ary[i] == "\\["
+      }
+      if(ary[i] == "]") {
+        ary[i] == "\\]"
+      }
+      if(ary[i] == "{") {
+        ary[i] == "\\{"
+      }
+      if(ary[i] == "}") {
+        ary[i] == "\\}"
+      }
+      if(ary[i] == "|") {
+        ary[i] == "\\|"
+      }
+    }
+  },
+
+  unescape: function(string = "") {
+    let ary = string.replace(",")
+    let l = ary.length
+    for(let i = 0; i<l; i++) {
+      if(ary[i] == "&gt") {
+        ary[i] == ">"
+      }
+      if(ary[i] == "&lt") {
+        ary[i] == "<"
+      }
+      if(ary[i] == "&amp") {
+        ary[i] == "&"
+      }
+      if(ary[i] == "&quot") {
+        ary[i] == '"'
+      }
+      if(ary[i] == "&#39") {
+        ary[i] == "'"
+      }
+    }
+  },
 
   // includes: function(collection, value, fromIndex = 0) {
     

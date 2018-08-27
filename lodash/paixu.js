@@ -43,3 +43,29 @@ function insert(root, val) {
   root.left=insert()
   root.right=insert()
 }
+
+
+function partition(ary) {
+  var pivotIndex = ary.length * Math.random() | 0
+  var pivot = ary[pivotIndex]
+
+  var i = -1, j=0
+
+  swap(ary,pivotIndex,)
+
+  for(;i<ary.length;i++) {
+    for(;j<ary.length;j++) {
+      if(ary[j]<pivot) {
+        
+      }
+    }
+  }
+}
+
+function mergeSort() {
+  var mid =ary.length / 2 | 0
+  var left = aty.slice(0, mid)
+  var right = ary.slice(mid)
+
+  
+}
