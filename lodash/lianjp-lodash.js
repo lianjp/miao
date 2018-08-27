@@ -368,12 +368,20 @@ var lianjp = {
   },
 
   pad: function(string = "", length = 0, chars = " ") {
-    let l=string.length
-    if(l>length) {
+    let l = string.length    
+    if(l<length) {
+      for(let i = 0; i<l ;i++) {
+        if(i/2 == 0) {
+          string = string + chars
+        }
+        if(i/2 != 0) {
+          string = chars + string
+        }
+      }
+    }else {
       return string
-    }else if(l<length) {
-      
     }
+    return string.slice(0,8)
   },
 
   padEnd: function(string = "", length = 0, chars = " ") {
@@ -491,6 +499,7 @@ var lianjp = {
         ary[i] == "&#39"
       }
     }
+    return ary.toString()
   },
 
   escapeRegExp: function(string = "") {
@@ -537,6 +546,7 @@ var lianjp = {
         ary[i] == "\\|"
       }
     }
+    return ary.toString()
   },
 
   unescape: function(string = "") {
@@ -559,7 +569,33 @@ var lianjp = {
         ary[i] == "'"
       }
     }
+    return ary.toString()
   },
+
+  repeat: function(string="", n=1) {
+    let str = ""
+    if(n == 0) {
+      return ""
+    }
+    for(let i = 0; i<n; i++) {
+      str += string 
+    }
+    return str
+  },
+
+  // replace: function(string="", pattern, replacement) {
+  //   if(Object.prototype.toString.call(pattern) == "[object String]") {
+  //     if(typeof(replacement) == "function") {
+        
+  //     }
+  //     if(typeof(replacement == "string")) {
+                                                                        
+  //     }
+  //   }
+  //   if(Object.prototype.toString.call(pattern) == "[object RegExp]") {
+      
+  //   }
+  // },
 
   // includes: function(collection, value, fromIndex = 0) {
     
