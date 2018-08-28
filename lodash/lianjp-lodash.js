@@ -484,19 +484,19 @@ var lianjp = {
     let l = ary.length
     for(let i = 0; i<l; i++) {      
         if(ary[i].indexOf(">") != -1) {
-          ary[i]=ary[i].replace(">","&gt")
+          ary[i]=ary[i].replace(">","&gt;")
         }
         if(ary[i].indexOf("<") != -1) {
-          ary[i]=ary[i].replace("<","&lt")
+          ary[i]=ary[i].replace("<","&lt;")
         }
         if(ary[i].indexOf("&") != -1) {
-          ary[i]=ary[i].replace("&","&amp")
+          ary[i]=ary[i].replace("&","&amp;")
         }
         if(ary[i].indexOf('"') != -1) {
-          ary[i]=ary[i].replace('"',"&quot")
+          ary[i]=ary[i].replace('"',"&quot;")
         }
         if(ary[i].indexOf("'") != -1) {
-          ary[i]=ary[i].replace("'","&#39")
+          ary[i]=ary[i].replace("'","&#39;")
         }           
     }
     return ary.toString()
@@ -554,20 +554,20 @@ var lianjp = {
     let ary = string.split(",")
     let l = ary.length
     for(let i = 0; i<l; i++) {
-      if(ary[i].indexOf("&gt") ) {
-        ary[i]=ary[i].replace("&gt",">") 
+      if(ary[i].indexOf("&gt;") ) {
+        ary[i]=ary[i].replace("&gt;",">") 
       }
-      if(ary[i].indexOf("&lt") ) {
-        ary[i]=ary[i].replace("&lt","<")
+      if(ary[i].indexOf("&lt;") ) {
+        ary[i]=ary[i].replace("&lt;","<")
       }
-      if(ary[i].indexOf("&amp") ) {
-        ary[i]=ary[i].replace("&amp","&")
+      if(ary[i].indexOf("&amp;") ) {
+        ary[i]=ary[i].replace("&amp;","&")
       }
-      if(ary[i].indexOf("&quot") ) {
-        ary[i]=ary[i].replace("&quot",'"')
+      if(ary[i].indexOf("&quot;") ) {
+        ary[i]=ary[i].replace("&quot;",'"')
       }
-      if(ary[i].indexOf("&#39") ) {
-        ary[i]=ary[i].replace("&#39","'")
+      if(ary[i].indexOf("&#39;") ) {
+        ary[i]=ary[i].replace("&#39;","'")
       }
     }
     return ary.toString()
