@@ -28,7 +28,7 @@ var lianjp = {
     return array.filter(item => !ary.includes(item))
   },
 
-  // differenceBy: function(array, ...values) {
+  // differenceBy: function(arra, ...values) {
   //   if(typeof values[values.length-1] == "function") {
        
   //   }
@@ -480,93 +480,94 @@ var lianjp = {
   },
 
   escape: function(string = "") {
-    let ary = string.replace(",")
+    let ary = string.split(",")
     let l = ary.length
-    for(let i = 0; i<l; i++) {
-      if(ary[i] == ">") {
-        ary[i] == "&gt"
-      }
-      if(ary[i] == "<") {
-        ary[i] == "&lt"
-      }
-      if(ary[i] == "&") {
-        ary[i] == "&amp"
-      }
-      if(ary[i] == '"') {
-        ary[i] == "&quot"
-      }
-      if(ary[i] == "'") {
-        ary[i] == "&#39"
-      }
+    for(let i = 0; i<l; i++) {      
+        if(ary[i].indexOf(">") != -1) {
+          ary[i]=ary[i].replace(">","&gt")
+        }
+        if(ary[i].indexOf("<") != -1) {
+          ary[i]=ary[i].replace("<","&lt")
+        }
+        if(ary[i].indexOf("&") != -1) {
+          ary[i]=ary[i].replace("&","&amp")
+        }
+        if(ary[i].indexOf('"') != -1) {
+          ary[i]=ary[i].replace('"',"&quot")
+        }
+        if(ary[i].indexOf("'") != -1) {
+          ary[i]=ary[i].replace("'","&#39")
+        }           
     }
     return ary.toString()
   },
+  //不要把单个字符拿出来替换，由于指针因素，字符串里的字符并未改变。
 
   escapeRegExp: function(string = "") {
-    let ary = string.replace(",")
+    let ary = string.split(",")
     let l = ary.length
     for(let i = 0; i<l; i++) {      
-      if(ary[i] == "^") {
-        ary[i] == "\\^"
+      if(ary[i].indexOf("^") != -1) {
+        ary[i]=ary[i].replace("^","\\^")
       }
-      if(ary[i] == "$") {
-        ary[i] == "\\$"
+      if(ary[i].indexOf("$") != -1) {
+        ary[i]=ary[i].replace("$","\\$")
       }
-      if(ary[i] == ".") {
-        ary[i] == "\\."
+      if(ary[i].indexOf(".") != -1) {
+        ary[i]=ary[i].replace(".","\\.")
       }
-      if(ary[i] == "*") {
-        ary[i] == "\\*"
+      if(ary[i].indexOf("*") != -1) {
+        ary[i]=ary[i].replace("*","\\*")
       }
-      if(ary[i] == "+") {
-        ary[i] == "\\+"
+      if(ary[i].indexOf("+") != -1) {
+        ary[i]=ary[i].replace("+","\\+")
       }
-      if(ary[i] == "?") {
-        ary[i] == "\\?"
+      if(ary[i].indexOf("?") != -1) {
+        ary[i]=ary[i].replace("?","\\?")
       }
-      if(ary[i] == "(") {
-        ary[i] == "\\("
+      if(ary[i].indexOf("(") != -1) {
+        ary[i]=ary[i].replace("(","\\(")
       }
-      if(ary[i] == ")") {
-        ary[i] == "\\)"
+      if(ary[i].indexOf(")") != -1) {
+        ary[i]=ary[i].replace(")","\\)")
       }
-      if(ary[i] == "[") {
-        ary[i] == "\\["
+      if(ary[i].indexOf("[") != -1) {
+        ary[i]=ary[i].replace("[","\\[")
       }
-      if(ary[i] == "]") {
-        ary[i] == "\\]"
+      if(ary[i].indexOf("]") != -1) {
+        ary[i]=ary[i].replace("]","\\]")
       }
-      if(ary[i] == "{") {
-        ary[i] == "\\{"
+      if(ary[i].indexOf("{") != -1) {
+        ary[i]=ary[i].replace("{","\\{")
       }
-      if(ary[i] == "}") {
-        ary[i] == "\\}"
+      if(ary[i].indexOf("}") != -1) {
+        ary[i]=ary[i].replace("}","\\}")
       }
-      if(ary[i] == "|") {
-        ary[i] == "\\|"
+      if(ary[i].indexOf("|") != -1) {
+        ary[i]=ary[i].replace("|","\\|")
       }
     }
     return ary.toString()
   },
 
   unescape: function(string = "") {
-    let ary = string.replace(",")
+    let ary = string.split(",")
     let l = ary.length
     for(let i = 0; i<l; i++) {
-      if(ary[i] == "&gt") {
-        ary[i] == ">"
+      if(ary[i].indexOf("&gt") ) {
+        ary[i]=ary[i].replace("&gt",">") 
       }
-      if(ary[i] == "&lt") {
-        ary[i] == "<"
+      if(ary[i].indexOf("&lt") ) {
+        ary[i]=ary[i].replace("&lt","<")
       }
-      if(ary[i] == "&amp") {
-        ary[i] == "&"
+      if(ary[i].indexOf("&amp") ) {
+        ary[i]=ary[i].replace("&amp","&")
       }
-      if(ary[i] == "&quot") {
-        ary[i] == '"'
+      if(ary[i].indexOf("&quot") ) {
+        ary[i]=ary[i].replace("&quot",'"')
       }
-      if(ary[i] == "&#39") {
-        ary[i] == "'"
+      if(ary[i].indexOf("&#39") ) {
+        ary[i]=ary[i].replace("&#39","'")
       }
     }
     return ary.toString()
