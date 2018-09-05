@@ -598,10 +598,6 @@ var lianjp = {
     return string.split(separator,limit)
   },
 
-  starCase: function(string="") {
-    
-  },
-
   upperFirst: function(string = "") {
     return string.replace(/\b[a-z]|\b[A-Z]/,function(first) {
       return first.toUpperCase()
@@ -631,6 +627,29 @@ var lianjp = {
     var reg = new RegExp(chars,"g")
     return string.replace(reg, "")
   },
+  
+  toLower: function(string = "") {
+    return string.replace(/\w/g, function(word) {
+      return word.toLowerCase()
+    })
+  },
+
+  toUpper: function(string = "") {
+    return string.replace(/\w/g, function(word) {
+      return word.toUpperCase()
+    })
+  },
+
+  startWith: function (string = "", target, position) {
+    return string.charAt(position) == target
+  },
+
+  starCase: function(string="") {
+    return string.replace(/(?<=[a-z])-(?=[a-z])|(?<=[a-z])(?=[A-Z])|(?<=[A-Z])_(?=[A-Z])/, " ").replace(/[-_]/g, "").replace(/\b\w/g, function(word) {
+      return word.toUpperCase()
+    })
+  },
+
 
 
 
