@@ -584,19 +584,55 @@ var lianjp = {
     return str
   },
 
-  // replace: function(string="", pattern, replacement) {
-  //   if(Object.prototype.toString.call(pattern) == "[object String]") {
-  //     if(typeof(replacement) == "function") {
-        
-  //     }
-  //     if(typeof(replacement == "string")) {
-                                                                        
-  //     }
-  //   }
-  //   if(Object.prototype.toString.call(pattern) == "[object RegExp]") {
-      
-  //   }
-  // },
+  replace: function(string="", pattern, replacement) {
+    var reg =new RegExp(pattern)
+    return string.replace(pattern,replacement)    
+  },
+
+  snakeCase: function(string="") {
+    var reg = /\s|(?=[A-Z])(?<=[a-z])|\b-\b/
+    return string.replace(reg,"_").replace(/-/g,"")
+  },
+
+  split: function(string="", separator, limit) {
+    return string.split(separator,limit)
+  },
+
+  starCase: function(string="") {
+    
+  },
+
+  upperFirst: function(string = "") {
+    return string.replace(/\b[a-z]|\b[A-Z]/,function(first) {
+      return first.toUpperCase()
+    })
+  },
+
+  upperCase: function(string = "") {
+    return string.replace(/(?<=[a-z])[-_](?=[a-z])|\B(?=[A-Z])/, " ").replace(/[-_]/g, "").replace(/\w/g, function(word){
+      return word.toUpperCase()
+    })
+  },
+
+  trim: function(string="", chars=" ") {
+    chars = '[' + chars + ']'
+    var reg = new RegExp(chars,"g")
+    return string.replace(reg, "")
+  },
+
+  trimEnd: function(string="", chars=" ") {
+    chars = "(?<=[a-zA-Z])[" + chars + "]+"
+    var reg = new RegExp(chars,"g")
+    return string.replace(reg, "")
+  },
+
+  trimStart: function(string="", chars=" ") {
+    chars = "[" + chars + "]+(?=[a-zA-Z])"
+    var reg = new RegExp(chars,"g")
+    return string.replace(reg, "")
+  },
+
+
 
   // includes: function(collection, value, fromIndex = 0) {
     
